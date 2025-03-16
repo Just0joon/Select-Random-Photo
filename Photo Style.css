@@ -1,0 +1,101 @@
+body {
+    background: rgb(55, 109, 98);
+}
+
+.button {
+    border-radius: 20px;
+    background-color: rgb(80, 255, 188);
+    color: rgb(35, 70, 61);
+    font-family: monospace;
+    position: absolute;
+    left: 0%;
+    bottom: 56%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button:hover {
+    filter: hue-rotate(30deg);
+    font-size: 26px;
+}
+
+.button:active {
+    filter: brightness(0.7);
+}
+
+.photo {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+#winner {
+    position: absolute;
+    left: 25px;
+    bottom: 47.5%;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    -webkit-text-stroke: 0.75px rgb(255, 237, 195);
+}
+
+#winnerI {
+    position: absolute;
+    left: 245px;
+    bottom: 47.5%;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+#box {
+    width: 900px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 7.5vw);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-rows: auto;
+    position: absolute;
+    gap: 2.5%;
+    top: 10px;
+    right: 300px;
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 18px;
+        bottom: 10%;
+        right: 0;
+        display: inline;
+    }
+
+    #box {
+        width: 100%;
+        right: 0;
+        top: 10px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+    }
+    
+    .photo {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 16px;
+        bottom: 15%;
+    }
+    
+    #winner, #winnerI {
+        font-size: 20px;
+    }
+    
+    #box {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
